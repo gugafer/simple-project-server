@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Testing Environment') {
             steps {
-                    sh 'mvn test -Dtest=ControllerAndServiceSuite'
-		    sh 'mvn test -Dtest=IntegrationSuite'
+                    sh 'mvn test -Dtest=ControllerAndServiceSuite -Dmaven.test.failure.ignore=true'
+		    sh 'mvn test -Dtest=IntegrationSuite -Dmaven.test.failure.ignore=true'
                 }
             }
         stage('Build') {
