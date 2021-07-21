@@ -6,7 +6,7 @@ pipeline {
             steps {
 //        sh 'mvn test -Dtest=ControllerAndServiceSuite -Dmaven.test.failure.ignore=true'
 //		sh 'mvn test -Dtest=IntegrationSuite -Dmaven.test.failure.ignore=true'
-        sh 'mvn test -Dmaven.test.failure.ignore=true'
+        sh 'mvn test -Dmaven.test.failure.ignore=false'
                 }
             }
         stage('Build') {
